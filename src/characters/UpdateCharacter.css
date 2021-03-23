@@ -1,0 +1,55 @@
+.update-box {
+  position: relative;
+  z-index: 0;
+}
+
+.update-headline {
+  margin-top: 20vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10em;
+  right: 3em;
+
+}
+
+nav > * {
+  color: var(--yellow);
+  text-shadow: var(--dark-blue) 1px 1px;
+  font-size: 1.25em;
+  text-decoration: none;
+  margin: 7px;
+}
+
+.update-img {
+  min-width: 50vw;
+  max-width: 60vw;
+  border: solid var(--yellow) 2px;
+  border-radius: 10px;
+  box-shadow: var(--dark-blue) 4px 4px 2px;
+
+}
+
+form > input, button {
+  margin: 10px;
+  border: solid var(--yellow) 2px;
+  border-radius: 10px;
+  box-shadow: var(--dark-blue) 4px 4px 2px;
+  width: 200px;
+  height: 30px;
+}
+
+button {
+  background-color: var(--red);
+}
+
+form {
+  margin-top: 2em;
+}
+
+input {
+}

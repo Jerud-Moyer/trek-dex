@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f2c300;
+  --red: #df0000;
+  --blue: #0099f6;
+  --dark-blue: #114463;
+}
+
+.detail-box {
+  position: relative;
+  background: var(--blue);
+  padding: 15vh 2em 2em 2em;
+}
+
+h1 {
+  font-family: 'Roddenberry';
+  font-size: 4.5em;
+  color: var(--yellow);
+  letter-spacing: .1em;
+  text-shadow: var(--red) 2px 2px;
+}
+
+h2 {
+  color: var(--dark-blue);
+  text-shadow: black 1px 1px 2px;
+}
+
+.character-pic {
+  min-width: 50vw;
+  max-width: 60vw;
+  border: var(--yellow) solid 2px;
+  border-radius: 20px;
+  box-shadow: var(--dark-blue) 4px 4px 4px, inset var(--dark-blue)  4px 4px;
+}
+
+.home-link {
+  position: fixed;
+  bottom: 3em;
+  right: 5em;
+  font-size: 2em;
+  color: var(--yellow);
+}
+
+.loading-message {
+  margin-top: 40vh;
+}

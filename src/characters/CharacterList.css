@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f2c300;
+  --red: #df0000;
+  --blue: #0099f6;
+  --dark-blue: #114463;
+}
+
+.list-box {
+  padding-top: 20vh;
+}
+
+.list-box > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+.character-box {
+  list-style: none;
+}
+
+.loading-message {
+  margin-top: 40vh;
+}

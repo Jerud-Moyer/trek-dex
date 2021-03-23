@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f2c300;
+  --red: #df0000;
+  --blue: #0099f6;
+  --dark-blue: #114463;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 15vh;
+  background: var(--blue);
+  border-bottom:  solid var(--red) 5px;
+  z-index: 1;
+}

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f2c300;
+  --red: #df0000;
+  --blue: #0099f6;
+  --dark-blue: #114463;
+}
+
+.link {
+  text-decoration: none;
+}
+
+figure {
+height: 27vh;
+width: 25vw;
+padding: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+border: solid var(--yellow) 2px;
+border-radius: 10px;
+background: var(--red);
+box-shadow: var(--dark-blue) 2px 2px;
+}
+
+.img {
+  max-width: 20vw;
+  max-height: 20vh;
+  border-radius: 10px;
+  box-shadow: var(--dark-blue) 2px 2px;
+}
+
+figCaption {
+  text-shadow: var(--dark-blue) 2px 2px;
+  color: var(--yellow);
+  font-size: 1.25em;
+}

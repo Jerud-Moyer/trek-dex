@@ -1,0 +1,45 @@
+:root {
+  --yellow: #f2c300;
+  --red: #df0000;
+  --blue: #0099f6;
+}
+
+@font-face {
+  font-family: 'Startrekenterprisefutureitalic';
+  src: local('Startrekenterprisefutureitalic'), url('./fonts/StartrekenterprisefutureItalic-a4KK.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'MINSPSW_';
+  src: local('MINSPSW_'), url('./fonts/MINSPSW_.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Stardate81316';
+  src: local('Stardate81316'), url('./fonts/Stardate81316-aolE.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'HesDeadJim';
+  src: local('HesDeadJim-apj9'), url('./fonts/HesDeadJim-apj9.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Roddenberry';
+  src: local('Roddenberry-DgLm'), url('./fonts/Roddenberry-DgLm.ttf') format('truetype')
+}
+
+body {
+  margin: 0;
+  background: var(--blue);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
