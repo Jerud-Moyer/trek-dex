@@ -101,7 +101,7 @@ const UpdateCharacter: React.FC = () => {
           <button>submit</button>
       </form>
       <nav>
-      <Link to='/admin' >admin home</Link>
+      <Link to='/admin'>admin home</Link>
       <Link to='/'>home</Link>
       </nav>
     </div>
