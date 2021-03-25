@@ -39,7 +39,7 @@ h2 {
 .home-link {
   position: fixed;
   bottom: 3em;
-  right: 5em;
+  right: 3em;
   font-size: 2em;
   color: var(--yellow);
 }
