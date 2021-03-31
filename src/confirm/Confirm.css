@@ -1,0 +1,13 @@
+.confirm-update, .confirm-delete {
+  position: fixed;
+  left: 25%;
+  top: 30%;
+  z-index: 10;
+  width: 40rem;
+  height: 15rem;
+  background: var(--blue);
+  border: solid var(--red) 4px;
+  border-radius: 10px;
+  box-shadow: var(--dark-blue) 4px 4px 4px;
+  padding-top: 3rem;
+}
