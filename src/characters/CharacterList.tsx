@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { getCharacters } from '../sevices/trek-dex-api';
 import CharacterItem from './CharacterItem';
 import './CharacterList.css';
 
@@ -11,31 +10,29 @@ interface Character {
 
 type Props = {
   forAdmin: boolean;
+  passedCharacters: Character[];
 }
 
-const CharacterList: React.FC<Props> = (forAdmin) => {
-  const [loading, setLoading] = useState<boolean>(true);
+const CharacterList: React.FC<Props> = ({ forAdmin, passedCharacters }) => {
+  
   const [characters, setCharacters] = useState<Character[]>([]);
 
-  useEffect(() => { 
-  getCharacters()
-    .then(fetchedCharacters => setCharacters(fetchedCharacters))
-    .finally(() => setLoading(false))
-  }, [])
+
+  useEffect(() => {
+    setCharacters(passedCharacters);
+  }, [passedCharacters]);
+  
 
   const characterElements = characters ? characters.map(character => (
     <li 
       key={character.id}
       className='character-box'
       >
-      <CharacterItem {...forAdmin} {...character} />
+      <CharacterItem forAdmin={forAdmin} {...character} />
     </li>
   ))
   : null
   
-if (loading) return (
-  <h1 className='loading-message' >...Nomad Loading!</h1>
-  )
 
 return (
     <div className='list-box' >

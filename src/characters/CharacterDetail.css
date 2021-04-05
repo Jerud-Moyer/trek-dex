@@ -13,6 +13,8 @@
   position: relative;
   background: var(--blue);
   padding: 15vh 2em 2em 2em;
+
+  animation: grow .5s ease;
 }
 
 h1 {
@@ -46,4 +48,9 @@ h2 {
 
 .loading-message {
   margin-top: 40vh;
+}
+
+@keyframes grow {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
 }

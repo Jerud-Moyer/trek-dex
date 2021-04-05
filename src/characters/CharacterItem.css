@@ -25,6 +25,8 @@ border: solid var(--yellow) 2px;
 border-radius: 10px;
 background: var(--red);
 box-shadow: var(--dark-blue) 2px 2px;
+
+animation: shift .5s ease;
 }
 
 .img {
@@ -38,4 +40,9 @@ figCaption {
   text-shadow: var(--dark-blue) 2px 2px;
   color: var(--yellow);
   font-size: 1.25em;
+}
+
+@keyframes shift {
+    from {transform:  scale(0) translate(100px, 400px)}
+    to {transform:  scale(1) translate(0, 0);}
 }

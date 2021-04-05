@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addCharacter } from '../sevices/trek-dex-api';
+import { addCharacter, getCharacters } from '../sevices/trek-dex-api';
 import './AddCharacter.css';
 
 const AddCharacter = () => {
@@ -23,6 +23,7 @@ const AddCharacter = () => {
     setOrigin('')
     setRace('')
     setAffiliation('')
+    getCharacters();
   };
 
   const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
