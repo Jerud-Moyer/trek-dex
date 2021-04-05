@@ -7,9 +7,9 @@ import {
 import AdminPage from './admin/AdminPage';
 import './App.css';
 import CharacterDetail from './characters/CharacterDetail';
-import CharacterList from './characters/CharacterList';
 import UpdateCharacter from './characters/UpdateCharacter';
 import Header from './header/Header';
+import HomePage from './home/HomePage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Router>
         <Switch>
-          <Route exact path='/' component={CharacterList}/>
+          <Route exact path='/' component={HomePage}/>
           <Route exact path='/detail/:id' component={CharacterDetail}/>
           <Route exact path='/admin' component={AdminPage} />
           <Route exact path='/update/:id' component={UpdateCharacter} />
