@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './CharacterItem.css';
+import styles from './CharacterItem.module.css';
 
 type Props = {
   name: string;
@@ -12,9 +12,9 @@ type Props = {
 const CharacterItem: React.FC<Props> = ({ name, imageUrl, id, forAdmin }) => {
   return (
     <div>
-      <Link to={forAdmin ?`/update/${id}` : `/detail/${id}`} className='link'>
+      <Link to={forAdmin ?`/update/${id}` : `/detail/${id}`} className={styles.link}>
         <figure>
-          <img src={imageUrl} alt={name} className={'img'} />
+          <img src={imageUrl} alt={name} className={styles.img} />
           <figcaption>{name}</figcaption>
         </figure>
       </Link>

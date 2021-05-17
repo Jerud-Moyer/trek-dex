@@ -9,7 +9,7 @@ const AddCharacter = () => {
   const [race, setRace] = useState<string>('')
   const [affiliation, setAffiliation] = useState<string>('')
 
-  const handleSubmit = (e: React.ChangeEvent<any>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     addCharacter({
       name,

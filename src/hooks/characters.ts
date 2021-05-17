@@ -7,14 +7,6 @@ interface ListCharacter {
   imageUrl: string;
 }
 
-interface Character {
-  id: number;
-  name: string;
-  imageUrl: string;
-  origin: string;
-  race: string;
-  affiliation: string;
-}
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -31,11 +23,3 @@ export const useCharacters = () => {
     characters
 }
 };
-
-// export const useAddCharacter = () => {
-//   const [name, setName] = useState<string>('')
-//   const [imageUrl, setImageUrl] = useState<string>('')
-//   const [origin, setOrigin] = useState<string>('')
-//   const [race, setRace] = useState<string>('')
-//   const [affiliation, setAffiliation] = useState<string>('')
-// }

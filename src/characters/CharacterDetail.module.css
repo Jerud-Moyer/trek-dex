@@ -9,7 +9,7 @@
   --dark-blue: #114463;
 }
 
-.detail-box {
+.detailBox {
   position: relative;
   background: var(--blue);
   padding: 15vh 2em 2em 2em;
@@ -30,7 +30,7 @@ h2 {
   text-shadow: black 1px 1px 2px;
 }
 
-.character-pic {
+.characterPic {
   min-width: 50vw;
   max-width: 60vw;
   border: var(--yellow) solid 2px;
@@ -38,7 +38,7 @@ h2 {
   box-shadow: var(--dark-blue) 4px 4px 4px, inset var(--dark-blue)  4px 4px;
 }
 
-.home-link {
+.homeLink {
   position: fixed;
   bottom: 3em;
   right: 3em;
@@ -46,7 +46,7 @@ h2 {
   color: var(--yellow);
 }
 
-.loading-message {
+.loadingMessage {
   margin-top: 40vh;
 }
 
