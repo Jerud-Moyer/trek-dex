@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import AddCharacter from '../characters/AddCharacter'
 import CharacterList from '../characters/CharacterList'
 import { useCharacters } from '../hooks/characters'
-import './AdminPage.css';
+import styles from'./AdminPage.module.css';
 
 const AdminPage: React.FC = () => {
   
 const { loading, characters } = useCharacters();
 
-if(loading) return <h1 className='loading-message'>...Nomad Loading!</h1>;
+if(loading) return <h1 className={styles.loadingMessage}>...Nomad Loading!</h1>;
 
 
 

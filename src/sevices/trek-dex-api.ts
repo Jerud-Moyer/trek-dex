@@ -9,17 +9,25 @@ interface Character {
   imageUrl: string;
 }
 
+interface NewCharacter {
+  name: string;
+  affiliation: string;
+  origin: string;
+  race: string;
+  imageUrl: string;
+}
+
 
 export const getCharacters = async(): Promise<Character[]> => {
   const res = await fetch(url);
   const json = await res.json();
-  console.log(url)
+  
   if(!res.ok) throw new Error('ERROR NOMAD CANNOT COMPUTE!');
 
   return json;
 };
 
-export const getCharacterById = async(id: number): Promise<Character> => {
+export const getCharacterById = async(id: string): Promise<Character> => {
   const res = await fetch(`${url}/${id}`);
   const json = await res.json();
 
@@ -35,8 +43,8 @@ export const getCharacterById = async(id: number): Promise<Character> => {
   };
 };
 
-export const addCharacter = (newCharacter: Object): void => {
-  fetch(url, {
+export const addCharacter = (newCharacter: NewCharacter): Promise<Character> => {
+ return fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -46,17 +54,18 @@ export const addCharacter = (newCharacter: Object): void => {
     .then(res => res.json());
 };
 
-export const updateCharacter = (id: number, character: Character): void => {
-  fetch(`${url}/${id}`, {
+export const updateCharacter = (id: number, character: Character): Promise<Character> => {
+  return fetch(`${url}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(character)
-  });
+  })
+  .then(res => res.json());
 };
 
-export const deleteCharacter = (id: number): void => {
+export const deleteCharacter = (id: string): void => {
   fetch(`${url}/${id}`, {
     method: 'DELETE',
     headers: {

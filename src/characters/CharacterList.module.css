@@ -9,11 +9,11 @@
   --dark-blue: #114463;
 }
 
-.list-box {
+.listBox {
   padding-top: 20vh;
 }
 
-.list-box > ul {
+.listBox > ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
 
 }
 
-.character-box {
+.characterBox {
   list-style: none;
 }
 
