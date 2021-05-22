@@ -1,15 +1,17 @@
 import React from 'react'
 import CharacterList from '../characters/CharacterList';
 import { useCharacters } from '../hooks/characters'
+import Loading from '../Loading/Loading';
 import './HomePage.css';
 
 
 
 const Home: React.FC = () => {
 
-  const { loading, characters } = useCharacters();
+ 
+ const { loading, characters } = useCharacters();
 
-  if(loading) return <h1 className='loading-message'>...Nomad Loading</h1>
+  if(loading) return <Loading />
 
   return (
     <div>

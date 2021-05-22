@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom';
 import { deleteCharacter, getCharacterById } from '../sevices/trek-dex-api';
+import Loading from '../Loading/Loading';
 import styles from './CharacterDetail.module.css';
 
 type Character = {
@@ -36,7 +37,7 @@ const CharacterDetail: React.FC<Props> = ({ forAdmin, selectedCharacter }) => {
     deleteCharacter(id);
   }
 
-  if(loading) return <h1 className={styles.loadingMessage} >Nomad Loading!</h1>
+  if(loading) return <Loading />
 
   return (
     <div className={styles.detailBox}>
