@@ -1,4 +1,5 @@
 const url: string = process.env.REACT_APP_API_URL as string;
+const secretWord = process.env.REACT_APP_SECRET_WORD as string;
 
 interface Character {
   id: number;
@@ -33,14 +34,8 @@ export const getCharacterById = async(id: string): Promise<Character> => {
 
   if(!res.ok) throw new Error('ERROR, ERROR');
 
-  return {
-    id: json.id,
-    name: json.name,
-    affiliation: json.affiliation,
-    origin: json.origin,
-    race: json.race,
-    imageUrl: json.imageUrl
-  };
+   return json;
+ 
 };
 
 export const addCharacter = (newCharacter: NewCharacter): Promise<Character> => {
@@ -55,7 +50,7 @@ export const addCharacter = (newCharacter: NewCharacter): Promise<Character> => 
 };
 
 export const updateCharacter = (id: number, character: Character): Promise<Character> => {
-  return fetch(`${url}/${id}`, {
+  return fetch(`${url}/${secretWord}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -66,7 +61,7 @@ export const updateCharacter = (id: number, character: Character): Promise<Chara
 };
 
 export const deleteCharacter = (id: string): void => {
-  fetch(`${url}/${id}`, {
+  fetch(`${url}/${secretWord}/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
