@@ -50,7 +50,8 @@ export const addCharacter = (newCharacter: NewCharacter): Promise<Character> => 
 };
 
 export const updateCharacter = (id: number, character: Character, oldImageUrl: string): Promise<Character> => {
-  return fetch(`${url}/${secretWord}/${id}/${oldImageUrl}`, {
+  const oldImageKey: string = oldImageUrl.split('/')[3].split('.')[0]
+  return fetch(`${url}/${secretWord}/${id}/${oldImageKey}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
