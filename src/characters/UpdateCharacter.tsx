@@ -24,6 +24,7 @@ const UpdateCharacter: React.FC = () => {
   const [affiliation, setAffiliation] = useState<string>('');
   const [showUpdateConfirm, setShowUpdateConfirm] = useState<boolean>(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
+  const [oldImageUrl, setOldImageUrl] = useState<string>('');
 
   const history = useHistory();
   const { id }: number | any = useParams();
@@ -37,6 +38,7 @@ const UpdateCharacter: React.FC = () => {
       setOrigin(fetchedCharacter.origin);
       setRace(fetchedCharacter.race);
       setAffiliation(fetchedCharacter.affiliation);
+      setOldImageUrl(fetchedCharacter.imageUrl);
     })
     .finally(() => setLoading(false))
   }, [id])
@@ -58,7 +60,8 @@ const UpdateCharacter: React.FC = () => {
       race,
       origin,
       affiliation
-    });
+    },
+    oldImageUrl);
     getCharacterById(id)
     setShowUpdateConfirm(false);
     

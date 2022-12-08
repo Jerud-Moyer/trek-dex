@@ -49,8 +49,8 @@ export const addCharacter = (newCharacter: NewCharacter): Promise<Character> => 
     .then(res => res.json());
 };
 
-export const updateCharacter = (id: number, character: Character): Promise<Character> => {
-  return fetch(`${url}/${secretWord}/${id}`, {
+export const updateCharacter = (id: number, character: Character, oldImageUrl: string): Promise<Character> => {
+  return fetch(`${url}/${secretWord}/${id}/${oldImageUrl}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
