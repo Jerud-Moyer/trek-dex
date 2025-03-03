@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import Confirm from '../confirm/Confirm';
 import { deleteCharacter, getCharacterById, updateCharacter } from '../sevices/trek-dex-api';
@@ -26,7 +26,7 @@ const UpdateCharacter: React.FC = () => {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
   const [oldImageUrl, setOldImageUrl] = useState<string>('');
 
-  const history = useHistory();
+  const navigate = useNavigate()
   const { id }: number | any = useParams();
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const UpdateCharacter: React.FC = () => {
   const handleDelete = () => {
     deleteCharacter(id)
     setShowDeleteConfirm(false)
-    history.push('/admin')
+    navigate('/admin')
   }
 
   const handleDeleteState = () => {

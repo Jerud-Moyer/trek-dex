@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Routes
 } from 'react-router-dom';
 import AdminPage from './admin/AdminPage';
 import './App.css';
@@ -16,12 +16,12 @@ function App() {
     <div className='App'>
       <Header />
       <Router>
-        <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route exact path='/detail/:id' component={CharacterDetail}/>
-          <Route exact path='/admin' component={AdminPage} />
-          <Route exact path='/update/:id' component={UpdateCharacter} />
-        </Switch>
+        <Routes>
+          <Route path='/' Component={HomePage}/>
+          <Route path='/detail/:id' element={<CharacterDetail />}/>
+          <Route path='/admin' Component={AdminPage} />
+          <Route path='/update/:id' Component={UpdateCharacter} />
+        </Routes>
       </Router>
     </div>
   );
